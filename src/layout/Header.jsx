@@ -1,9 +1,8 @@
 import React, { useState, useContext } from "react";
 import { ThemeContext } from "../contexts/theme-context";
 
-import sun from "../assets/images/icon-sun.svg"
-import moon from "../assets/images/icon-moon.svg"
-
+import sun from "../assets/images/icon-sun.svg";
+import moon from "../assets/images/icon-moon.svg";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -19,8 +18,11 @@ const Header = () => {
   return (
     <div className="header">
       <h1>Todo</h1>
-      <button onClick={handleThemeChange} className="btn btn--transparent click">
-        <img src={toggle ? sun : moon} alt={toggle ? "sun": "moon"} />
+      <button
+        onClick={handleThemeChange}
+        className="btn btn--transparent click"
+      >
+        <img src={toggle ? sun : moon} alt={toggle ? "sun" : "moon"} />
       </button>
     </div>
   );

@@ -10,7 +10,7 @@
   margin-top: 2rem;
 
   .item {
-    @include flex($justify:space-between, $direction: row);
+    @include flex($justify: space-between, $direction: row);
     padding: 1.5em 2em;
     width: 100%;
     gap: 2em;
@@ -29,15 +29,12 @@
       display: none;
     }
   }
-
-  
 }
 
 .item-box {
-  @include flex($direction:row);
+  @include flex($direction: row);
   gap: 1rem;
 }
-
 
 .actions {
   @include flex($justify: space-around, $direction: row);
@@ -48,7 +45,7 @@
   @media (min-width: $screen-sm) {
     padding: 0.5em 1em;
   }
-  
+
   .action {
     @include flex($direction: row);
     gap: 1em;

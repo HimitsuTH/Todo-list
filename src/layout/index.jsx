@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Item from "../components/Item";
-import * as uuid from 'uuid';
-
+import * as uuid from "uuid";
 
 const index = () => {
   const [message, setMessage] = useState("");
@@ -22,7 +21,7 @@ const index = () => {
       return item.id !== id;
     });
 
-    setItems(removeItem)
+    setItems(removeItem);
   };
 
   const handleChange = (event) => {
@@ -111,7 +110,7 @@ const index = () => {
         </div>
         <div className="Items">
           {items.map((item, i) => (
-            <Item todo={item} key={item.id} deleteClick={handleDeleteClick}/>
+            <Item todo={item} key={item.id} deleteClick={handleDeleteClick} />
           ))}
           {items?.length > 0 && (
             <div className="actions">
@@ -131,7 +130,7 @@ const index = () => {
                 className="click"
                 onClick={() => {
                   setItems([]);
-                 
+
                   setCount(0);
                 }}
               >
@@ -141,8 +140,6 @@ const index = () => {
           )}
         </div>
       </main>
-
-
     </div>
   );
 };

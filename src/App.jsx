@@ -14,12 +14,15 @@ function App() {
     const localStorageTheme = localStorage.getItem("default-theme");
     const browserDefault = isBrowserDefaulDark() ? "dark" : "light";
 
-    document.documentElement.setAttribute("data-theme", localStorageTheme || browserDefault);
+    document.documentElement.setAttribute(
+      "data-theme",
+      localStorageTheme || browserDefault
+    );
     return localStorageTheme || browserDefault;
   };
 
   const [theme, setTheme] = useState(getDefaultTheme());
-  
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`theme-${theme} `}>

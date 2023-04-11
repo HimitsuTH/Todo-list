@@ -1,4 +1,4 @@
 .header {
-  @include flex($justify:space-between,$direction:row);
+  @include flex($justify: space-between, $direction: row);
   width: 100%;
 }

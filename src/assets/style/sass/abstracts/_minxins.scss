@@ -3,9 +3,9 @@
   height: $height;
 }
 
-@mixin flex($justify:center, $align:center, $direction:column){
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-    flex-direction: $direction;
+@mixin flex($justify: center, $align: center, $direction: column) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
 }
