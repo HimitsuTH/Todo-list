@@ -1,0 +1,18 @@
+.circle {
+//   border: 1px solid #333;
+  display: block;
+  border-radius: 50%;
+  
+  @include size(25px);
+  @include flex;
+
+  @include themify($themes) {
+    border: 1px solid themed("borderColor");
+  }
+  &--active{
+    background: linear-gradient(115deg, hsl(192, 100%, 67%) 0%, hsl(280, 87%, 65%) 100%);
+  }
+}
+
+
+

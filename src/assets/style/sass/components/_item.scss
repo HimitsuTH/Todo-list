@@ -1,0 +1,73 @@
+.Items {
+  @include flex;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+  @include themify($themes) {
+    background: themed("boxBackground");
+    color: themed("textColor");
+  }
+  width: 100%;
+  border-radius: 0.25rem;
+  margin-top: 2rem;
+
+  .item {
+    @include flex($justify:space-between, $direction: row);
+    padding: 1.5em 2em;
+    width: 100%;
+    gap: 2em;
+    @include themify($themes) {
+      border-bottom: 1px solid themed("borderColor");
+    }
+
+    &--active {
+      text-decoration: line-through;
+      @include themify($themes) {
+        color: themed("textActive");
+      }
+    }
+    &--invisible {
+      visibility: hidden;
+      display: none;
+    }
+  }
+
+  
+}
+
+.item-box {
+  @include flex($direction:row);
+  gap: 1rem;
+}
+
+
+.actions {
+  @include flex($justify: space-around, $direction: row);
+  @include size(100%);
+  padding: 1.5em 2em;
+  text-align: center;
+  font-size: 14px;
+  @media (min-width: $screen-sm) {
+    padding: 0.5em 1em;
+  }
+  
+  .action {
+    @include flex($direction: row);
+    gap: 1em;
+    position: absolute;
+    bottom: -30%;
+    padding: 1.5em 0.5em;
+    @include themify($themes) {
+      background: themed("boxBackground");
+      color: themed("textColor");
+    }
+    border-radius: 0.5em;
+    width: 100%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+
+    @media (min-width: $screen-sm) {
+      position: static;
+      box-shadow: none;
+      flex: 1;
+      background: transparent;
+    }
+  }
+}

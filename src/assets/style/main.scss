@@ -1,0 +1,41 @@
+//abstracts
+@import "./sass/abstracts/minxins";
+@import "./sass/abstracts/theme";
+@import "./sass/abstracts/variables";
+
+//components
+@import "./sass/components/backgroundImage";
+@import "./sass/components/input";
+@import "./sass/components/item";
+@import "./sass/components/circle";
+@import "./sass/components/button";
+
+//layout
+@import "./sass/layout/index";
+@import "./sass/layout/main";
+@import "./sass/layout/header";
+@import "./sass/layout/footer";
+
+
+//font
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+$font-family: "Inter";
+
+body {
+  font-family: $font-family, sans-serif;
+  background-color: var(--background-color);
+}
+
+.app {
+  max-height: 100vh;
+  @include flex($justify: flex-start);
+
+  z-index: -2;
+}
+
+.click {
+  cursor: pointer;
+}
+
+

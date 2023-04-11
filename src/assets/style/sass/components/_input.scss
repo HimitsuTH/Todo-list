@@ -1,0 +1,25 @@
+.box {
+  @include flex($justify: flex-start, $direction: row);
+  padding: 1.5em 2em;
+  @include themify($themes) {
+    background: themed("boxBackground");
+    color: themed("textColor");
+  }
+  gap: 2em;
+  width: 100%;
+  border-radius: 0.25rem;
+  margin-top: 2rem;
+}
+
+#message {
+  width: 80%;
+  outline: none;
+  border: none;
+  font-size: $font-n;
+  background-color: transparent;
+  @include themify($themes) {
+    color: themed("textColor");
+  }
+}
+
+

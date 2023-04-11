@@ -1,0 +1,67 @@
+// ### Light Theme
+
+$Very-Light-Gray: hsl(0, 0%, 98%);
+$Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+$Light-Grayish-Blue: hsl(233, 11%, 84%);
+$Dark-Grayish-Blue: hsl(236, 9%, 61%);
+$Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+// ### Dark Theme
+
+$Very-Dark-Blue: hsl(235, 21%, 11%);
+$Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+$Light-Dark-Grayish-Blue: hsl(234, 39%, 85%);
+$Light-Dark-Grayish-Blue: hsl(236, 33%, 92%); //(hover)
+$Dark-Dark-Grayish-Blue: hsl(234, 11%, 52%);
+$Very-Dark-Grayish-Blue-1: hsl(233, 14%, 35%);
+$Very-Dark-Grayish-Blue-2: hsl(237, 14%, 26%);
+
+:root {
+  --background-color: hsl(0, 0%, 98%);
+}
+
+[data-theme="dark"] {
+  --background-color: hsl(235, 21%, 11%);
+}
+
+$themes: (
+  light: (
+    bodyBackgroundColor: $Very-Light-Grayish-Blue,
+    boxBackground: $Very-Light-Gray,
+    textColor: #000,
+    textActive: $Dark-Grayish-Blue,
+    toggleBackground: #dfe4ea,
+    borderColor: $Light-Grayish-Blue,
+  ),
+  dark: (
+    bodyBackgroundColor: $Very-Dark-Blue,
+    boxBackground: $Very-Dark-Desaturated-Blue,
+    textColor: #eff2f7,
+    textActive: $Dark-Dark-Grayish-Blue,
+    toggleBackground: #606071,
+    borderColor: $Very-Dark-Grayish-Blue-2,
+  ),
+);
+
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
