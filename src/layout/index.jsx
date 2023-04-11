@@ -16,6 +16,10 @@ const index = () => {
   });
   const [count, setCount] = useState(items.length | 0);
 
+  // ----------------
+  // todos actions
+  // ----------------
+
   const handleDeleteClick = (id) => {
     const removeItem = items.filter((item) => {
       return item.id !== id;
@@ -23,7 +27,26 @@ const index = () => {
 
     setItems(removeItem);
   };
+  const handleCompletedClick = (id, toggle) => {
 
+    const todo = items.map((item) => {
+      if (item.id === id) {
+        return (item = {
+          id: item.id,
+          message: item.message,
+          completed: toggle,
+        });
+      } else {
+        return item;
+      }
+    });
+
+    // console.log(todo);
+
+    setItems(todo);
+  };
+
+  // set message
   const handleChange = (event) => {
     setMessage(event.target.value);
   };
@@ -36,6 +59,7 @@ const index = () => {
         {
           id: uuid.v4(),
           message: message.trim(),
+          completed: false,
         },
       ]);
 
@@ -110,7 +134,12 @@ const index = () => {
         </div>
         <div className="Items">
           {items.map((item, i) => (
-            <Item todo={item} key={item.id} deleteClick={handleDeleteClick} />
+            <Item
+              todo={item}
+              key={item.id}
+              deleteClick={handleDeleteClick}
+              completeClick={handleCompletedClick}
+            />
           ))}
           {items?.length > 0 && (
             <div className="actions">
