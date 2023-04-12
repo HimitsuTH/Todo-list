@@ -2,8 +2,11 @@
   @include flex($justify: space-between, $direction: row);
   width: 100%;
   user-select: none;
+  margin-top: 3.75em;
 
   h1 {
     color :  $Very-Light-Gray;
+    text-transform: uppercase;
+    letter-spacing: 0.75rem;
   }
 }

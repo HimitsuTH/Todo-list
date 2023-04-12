@@ -16,15 +16,22 @@
 @import "./sass/layout/index";
 @import "./sass/layout/main";
 @import "./sass/layout/header";
-@import "./sass/layout/footer";
 
 //font
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 $font-family: "Inter";
 
-body {
-  font-family: $font-family, sans-serif;
+
+@import url("https://fonts.google.com/specimen/Josefin+Sans");
+
+$Josefin : "Josefin Sans";
+
+
+
+
+html {
+  font-family:"Inter", sans-serif;
   background-color: var(--background-color);
 }
 

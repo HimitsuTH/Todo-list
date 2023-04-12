@@ -1,6 +1,6 @@
 .Items {
   @include flex;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 10px 20px hsla(235, 19%, 35%,0.2);
   @include themify($themes) {
     background: themed("boxBackground");
     color: themed("textColor");
