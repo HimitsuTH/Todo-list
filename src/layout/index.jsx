@@ -120,6 +120,15 @@ const index = () => {
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(items));
+    const arr_items = document.querySelectorAll(".item");
+    arr_items.forEach((item) => {
+      if (item.classList.contains("item--invisible")) {
+        item.classList.remove("item--invisible");
+      }
+    });
+    setCount(items.length)
+
+
   }, [items]);
 
   return (
