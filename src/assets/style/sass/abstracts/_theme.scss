@@ -30,7 +30,7 @@ $themes: (
   light: (
     bodyBackgroundColor: $Very-Light-Grayish-Blue,
     boxBackground: $Very-Light-Gray,
-    textColor: #000,
+    textColor: $Very-Dark-Grayish-Blue,
     textActive: $Dark-Grayish-Blue,
     textActionColor:$Dark-Grayish-Blue,
     borderColor: $Light-Grayish-Blue,
@@ -38,7 +38,7 @@ $themes: (
   dark: (
     bodyBackgroundColor: $Very-Dark-Blue,
     boxBackground: $Very-Dark-Desaturated-Blue,
-    textColor: #eff2f7,
+    textColor: $Light-Dark-Grayish-Blue,
     textActive: $Dark-Dark-Grayish-Blue,
     textActionColor: $Dark-Dark-Grayish-Blue,
     borderColor: $Very-Dark-Grayish-Blue-2,
