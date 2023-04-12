@@ -25,7 +25,6 @@ const index = () => {
       return item.id !== id;
     });
 
-
     setCount(removeItem.length);
     setItems(removeItem);
   };
@@ -54,7 +53,7 @@ const index = () => {
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter" && message.trim() != "") {
-      // 👇 Get input value
+      // 👇 set items
       setItems([
         ...items,
         {
@@ -112,6 +111,13 @@ const index = () => {
     });
   };
 
+  //Clear Complete
+  const handleClearCompleted = () => {
+    const itemNotCompleted = items.filter((item) => item.completed !== true);
+    setItems(itemNotCompleted);
+    setCount(itemNotCompleted?.length);
+  };
+
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(items));
   }, [items]);
@@ -158,14 +164,7 @@ const index = () => {
                   Completed
                 </p>
               </div>
-              <p
-                className="click click--action"
-                onClick={() => {
-                  setItems([]);
-
-                  setCount(0);
-                }}
-              >
+              <p className="click click--action" onClick={handleClearCompleted}>
                 Clear Completed
               </p>
             </div>
