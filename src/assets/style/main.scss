@@ -11,7 +11,6 @@
 @import "./sass/components/button";
 @import "./sass/components/click";
 
-
 //layout
 @import "./sass/layout/index";
 @import "./sass/layout/main";
@@ -22,17 +21,14 @@
 
 $font-family: "Inter";
 
-
 @import url("https://fonts.google.com/specimen/Josefin+Sans");
 
-$Josefin : "Josefin Sans";
-
-
-
+$Josefin: "Josefin Sans";
 
 html {
-  font-family:"Inter", sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--background-color);
+  transition: background-color 1s;
 }
 
 .app {
@@ -41,4 +37,3 @@ html {
 
   z-index: -2;
 }
-

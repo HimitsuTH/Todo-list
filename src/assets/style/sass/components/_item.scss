@@ -1,6 +1,6 @@
 .Items {
   @include flex;
-  box-shadow: 5px 10px 20px hsla(235, 19%, 35%,0.2);
+  box-shadow: 5px 10px 20px hsla(235, 19%, 35%, 0.2);
   @include themify($themes) {
     background: themed("boxBackground");
     color: themed("textColor");
@@ -11,6 +11,7 @@
   p {
     user-select: none;
   }
+  transition: background 0.2s, color 1s;
 
   .item {
     @include flex($justify: space-between, $direction: row);
@@ -54,6 +55,8 @@
     color: themed("textActionColor");
   }
 
+  transition: color 1s;
+
   .action {
     @include flex($direction: row);
     gap: 1.5em;
@@ -61,18 +64,20 @@
     bottom: -30%;
     padding: 1.5em 0.5em;
     @include themify($themes) {
-      background: themed("boxBackground");
+      background-color: themed("boxBackground");
     }
+
+    transition: background-color 0.2s;
 
     border-radius: 0.5em;
     width: 100%;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    // box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 
     @media (min-width: $screen-sm) {
       position: static;
       box-shadow: none;
       flex: 1;
-      background: transparent;
+      background-color: transparent;
     }
   }
 }

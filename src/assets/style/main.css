@@ -22,6 +22,12 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: opacity 0.4s ease-out;
+  -webkit-transition: opacity 0.4s ease-out;
+  -moz-transition: opacity 0.4s ease-out;
+  -ms-transition: opacity 0.4s ease-out;
+  -o-transition: opacity 0.4s ease-out;
+  opacity: 0.9;
 }
 
 .box {
@@ -79,6 +85,7 @@
   width: 100%;
   border-radius: 0.25rem;
   margin-top: 2rem;
+  transition: background 0.2s, color 1s;
 }
 .theme-light .Items {
   background: hsl(0, 0%, 98%);
@@ -140,6 +147,7 @@
   padding: 1.5em 2em;
   text-align: center;
   font-size: 14px;
+  transition: color 1s;
 }
 @media (min-width: 36em) {
   .actions {
@@ -161,22 +169,22 @@
   position: absolute;
   bottom: -30%;
   padding: 1.5em 0.5em;
+  transition: background-color 0.2s;
   border-radius: 0.5em;
   width: 100%;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 .theme-light .actions .action {
-  background: hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 98%);
 }
 .theme-dark .actions .action {
-  background: hsl(235, 24%, 19%);
+  background-color: hsl(235, 24%, 19%);
 }
 @media (min-width: 36em) {
   .actions .action {
     position: static;
     box-shadow: none;
     flex: 1;
-    background: transparent;
+    background-color: transparent;
   }
 }
 
@@ -260,6 +268,7 @@ main {
 html {
   font-family: "Inter", sans-serif;
   background-color: var(--background-color);
+  transition: background-color 1s;
 }
 
 .app {
