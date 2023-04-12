@@ -32,7 +32,7 @@ $themes: (
     boxBackground: $Very-Light-Gray,
     textColor: #000,
     textActive: $Dark-Grayish-Blue,
-    toggleBackground: #dfe4ea,
+    textActionColor:$Dark-Grayish-Blue,
     borderColor: $Light-Grayish-Blue,
   ),
   dark: (
@@ -40,7 +40,7 @@ $themes: (
     boxBackground: $Very-Dark-Desaturated-Blue,
     textColor: #eff2f7,
     textActive: $Dark-Dark-Grayish-Blue,
-    toggleBackground: #606071,
+    textActionColor: $Dark-Dark-Grayish-Blue,
     borderColor: $Very-Dark-Grayish-Blue-2,
   ),
 );

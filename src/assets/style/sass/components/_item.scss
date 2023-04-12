@@ -8,9 +8,13 @@
   width: 100%;
   border-radius: 0.25rem;
   margin-top: 2rem;
+  p {
+    user-select: none;
+  }
 
   .item {
     @include flex($justify: space-between, $direction: row);
+
     padding: 1.5em 2em;
     width: 100%;
     gap: 2em;
@@ -21,7 +25,7 @@
     &--active {
       text-decoration: line-through;
       @include themify($themes) {
-        color: themed("textActive");
+        color: themed("textActionColor");
       }
     }
     &--invisible {
@@ -46,16 +50,20 @@
     padding: 0.5em 1em;
   }
 
+  @include themify($themes) {
+    color: themed("textActionColor");
+  }
+
   .action {
     @include flex($direction: row);
-    gap: 1em;
+    gap: 1.5em;
     position: absolute;
     bottom: -30%;
     padding: 1.5em 0.5em;
     @include themify($themes) {
       background: themed("boxBackground");
-      color: themed("textColor");
     }
+
     border-radius: 0.5em;
     width: 100%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);

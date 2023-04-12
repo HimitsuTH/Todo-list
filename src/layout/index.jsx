@@ -25,6 +25,8 @@ const index = () => {
       return item.id !== id;
     });
 
+
+    setCount(removeItem.length);
     setItems(removeItem);
   };
   const handleCompletedClick = (id, toggle) => {

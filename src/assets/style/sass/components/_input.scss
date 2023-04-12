@@ -20,4 +20,10 @@
   @include themify($themes) {
     color: themed("textColor");
   }
+  
+  &::placeholder {
+    @include themify($themes) {
+      color: themed("textActionColor");
+    }
+  }
 }
