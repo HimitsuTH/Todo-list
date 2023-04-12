@@ -28,7 +28,6 @@ const index = () => {
     setItems(removeItem);
   };
   const handleCompletedClick = (id, toggle) => {
-
     const todo = items.map((item) => {
       if (item.id === id) {
         return (item = {
@@ -118,7 +117,6 @@ const index = () => {
   return (
     <div className="layout">
       <Header />
-
       <main>
         <div className="box">
           <div className="circle"></div>
@@ -145,18 +143,21 @@ const index = () => {
             <div className="actions">
               <p>{count} items left</p>
               <div className="action">
-                <p className="click" onClick={handleShowAll}>
+                <p className="click click--action" onClick={handleShowAll}>
                   All
                 </p>
-                <p className="click" onClick={handleShowActive}>
+                <p className="click click--action" onClick={handleShowActive}>
                   Active
                 </p>
-                <p className="click" onClick={handleShowCompleted}>
+                <p
+                  className="click click--action"
+                  onClick={handleShowCompleted}
+                >
                   Completed
                 </p>
               </div>
               <p
-                className="click"
+                className="click click--action"
                 onClick={() => {
                   setItems([]);
 

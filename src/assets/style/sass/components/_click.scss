@@ -1,0 +1,9 @@
+.click {
+  cursor: pointer;
+
+  transition: 0.2s all;
+
+  &--action:hover {
+    color: $Bright-Blue
+  }
+}

@@ -9,7 +9,7 @@ const Item = ({ todo, deleteClick,completeClick }) => {
     <div className={`item ${toggle ? "item--active" : ""}`}>
       <div className="item-box">
         <div
-          className={`circle ${toggle ? "circle--active" : ""}`}
+          className={`circle click ${toggle ? "circle--active" : ""}`}
           onClick={() => {
             setToggle(!toggle)
             completeClick(todo.id, !toggle);
@@ -20,7 +20,7 @@ const Item = ({ todo, deleteClick,completeClick }) => {
         <p>{todo.message}</p>
       </div>
       <button
-        className="btn btn--transparent click"
+        className="btn btn--transparent click "
         onClick={() => deleteClick(todo.id)}
       >
         <img src={cross} alt="cross" />

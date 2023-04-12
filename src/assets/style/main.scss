@@ -9,6 +9,8 @@
 @import "./sass/components/item";
 @import "./sass/components/circle";
 @import "./sass/components/button";
+@import "./sass/components/click";
+
 
 //layout
 @import "./sass/layout/index";
@@ -33,6 +35,3 @@ body {
   z-index: -2;
 }
 
-.click {
-  cursor: pointer;
-}

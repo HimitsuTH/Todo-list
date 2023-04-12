@@ -1,4 +1,8 @@
 .header {
   @include flex($justify: space-between, $direction: row);
   width: 100%;
+
+  h1 {
+    color :  $Very-Light-Gray;
+  }
 }

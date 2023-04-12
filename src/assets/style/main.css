@@ -186,6 +186,14 @@
   background-color: transparent;
 }
 
+.click {
+  cursor: pointer;
+  transition: 0.2s all;
+}
+.click--action:hover {
+  color: hsl(220, 98%, 61%);
+}
+
 .layout {
   width: 100%;
   height: 100vh;
@@ -213,6 +221,9 @@ main {
   align-items: center;
   flex-direction: row;
   width: 100%;
+}
+.header h1 {
+  color: hsl(0, 0%, 98%);
 }
 
 .footer {
@@ -245,8 +256,4 @@ body {
   align-items: center;
   flex-direction: column;
   z-index: -2;
-}
-
-.click {
-  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
