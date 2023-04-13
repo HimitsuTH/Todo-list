@@ -58,10 +58,11 @@
   transition: color 1s;
 
   .action {
+    // margin-top: 1rem;
     @include flex($direction: row);
     gap: 1.5em;
     position: absolute;
-    bottom: -30%;
+    bottom: -12%;
     padding: 1.5em 0.5em;
     @include themify($themes) {
       background-color: themed("boxBackground");

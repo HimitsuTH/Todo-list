@@ -126,9 +126,7 @@ const index = () => {
         item.classList.remove("item--invisible");
       }
     });
-    setCount(items.length)
-
-
+    setCount(items.length);
   }, [items]);
 
   return (
