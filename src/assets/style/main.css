@@ -146,6 +146,7 @@
   height: 100%;
   padding: 1.5em 2em;
   text-align: center;
+  position: relative;
   font-size: 14px;
   transition: color 1s;
 }
@@ -167,11 +168,12 @@
   flex-direction: row;
   gap: 1.5em;
   position: absolute;
-  bottom: -12%;
+  bottom: -120%;
   padding: 1.5em 0.5em;
   transition: background-color 0.2s;
   border-radius: 0.5em;
   width: 100%;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 .theme-light .actions .action {
   background-color: hsl(0, 0%, 98%);
@@ -185,6 +187,7 @@
     box-shadow: none;
     flex: 1;
     background-color: transparent;
+    box-shadow: none;
   }
 }
 

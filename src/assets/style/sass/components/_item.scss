@@ -46,6 +46,7 @@
   @include size(100%);
   padding: 1.5em 2em;
   text-align: center;
+  position: relative;
   font-size: 14px;
   @media (min-width: $screen-sm) {
     padding: 0.5em 1em;
@@ -58,11 +59,11 @@
   transition: color 1s;
 
   .action {
-    // margin-top: 1rem;
+   
     @include flex($direction: row);
     gap: 1.5em;
     position: absolute;
-    bottom: -12%;
+    bottom: -120%;
     padding: 1.5em 0.5em;
     @include themify($themes) {
       background-color: themed("boxBackground");
@@ -72,13 +73,14 @@
 
     border-radius: 0.5em;
     width: 100%;
-    // box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 
     @media (min-width: $screen-sm) {
       position: static;
       box-shadow: none;
       flex: 1;
       background-color: transparent;
+      box-shadow: none;
     }
   }
 }
